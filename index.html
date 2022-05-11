@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <h1>민수민의 웹사이트</h1>
 <div id="grid">
     <div id="active">
@@ -18,6 +19,14 @@
         </ol>
         </strong>
     </div>
+    <input type="button" value="night"
+    onclick="document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';"
+>
+<input type="button" value="day"
+    onclick="document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';"
+>
     <div id="soup">
         <h2> -웹사이트 소개</h2>
         <p>
