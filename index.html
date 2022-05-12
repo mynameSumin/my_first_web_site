@@ -12,10 +12,15 @@
     <div id="active">
         <strong>
         <ol>
-            <li><a href="html1.html" target="_blank">나의 TMI</a></li>
-            <li><a href="html2.html" target="_blank">나의 사진들</a></li>
-            <li><a href="html3.html" target="_blank">최근 근황</a></li>
-            <li><a href="html4.html" target="_blank">글을 마무리하며</a></li>
+            <script>
+                var list = ["나의 TMI", "나의 사진들", "최근 근황", "글을 마무리하며"];
+                var list_link = ["html1.html", "html2.html", "html3.html", "html4.html"]
+                var i = 0;
+                while(i < list.length){
+                    document.write('<li><a href='+ list_link[i] + 'target="_blank">' + list[i] + '</a></li>');
+                    i++;
+                    }
+            </script>
         </ol>
         </strong>
     </div>
@@ -36,16 +41,33 @@
         <P>
             보고 댓글도 달아주세요
         </P>
-        <input type="button" value="night"
-    onclick="document.querySelector('body').style.backgroundColor = 'black';
-            document.querySelector('body').style.color = 'white';"
-        >
-        </P>
-        <input type="button" value="day"
-    onclick="document.querySelector('body').style.backgroundColor = 'white';
-            document.querySelector('body').style.color = 'black';"
-        >
-        
+       <input id="night_day" type="button" value="night"
+               onclick="
+                    var target = document.querySelector('body');
+                    if(this.value === 'night'){
+                        target.style.background = 'black';
+                        target.style.color = 'white';
+                        this.value = 'day';
+
+                        var list_a = document.querySelectorAll('a');
+                        var i = 0;
+                        while(i < list_a.length){
+                            list_a[i].style.color = 'white';
+                            i++;
+                        }
+                    }
+                    else{
+                        target.style.backgroundColor = 'white';
+                        target.style.color = 'black';
+                        this.value = 'night';
+                        var list_a = document.querySelectorAll('a');
+                        var i = 0;
+                        while(i < list_a.length){
+                            list_a[i].style.color = 'blue';
+                            i++;
+                        }
+                    }
+        ">
     </div>
 </div>
 <p>
