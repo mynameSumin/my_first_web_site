@@ -12,15 +12,17 @@
     <div id="active">
         <strong>
         <ol>
-            <script>
+            <strong>
+        <script>
                 var list = ["나의 TMI", "나의 사진들", "최근 근황", "글을 마무리하며"];
                 var list_link = ["html1.html", "html2.html", "html3.html", "html4.html"]
                 var i = 0;
                 while(i < list.length){
-                    document.write('<li><a href='+ list_link[i] + 'target="_blank">' + list[i] + '</a></li>');
+                    document.write('<li><a href="'+ list_link[i] + '" target="_blank">' + list[i] + '</a></li>');
                     i++;
                     }
             </script>
+            </strong>
         </ol>
         </strong>
     </div>
